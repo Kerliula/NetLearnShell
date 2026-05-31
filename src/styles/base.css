@@ -1,0 +1,71 @@
+@theme {
+  /* ── Layout ── */
+  --width-sidebar: 13rem;
+  --spacing-content-x: 3rem;
+  --spacing-content-y: 2.25rem;
+  --spacing-sidebar-x: 0.875rem;
+  --spacing-sidebar-y: 1.25rem;
+  --spacing-topbar-x: 3rem;
+  --spacing-topbar-y: 0.75rem;
+
+  /* ── Spacing scale ── */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* ── Border radius ── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 9999px;
+
+  /* ── Colors ── */
+  --color-surface: #faf9f6;
+  --color-surface-alt: #f2f0eb;
+  --color-surface-hover: #e8e5de;
+  --color-surface-inverse: #1a1916;
+  --color-surface-sidebar: #f2f0eb;
+
+  --color-text-primary: #1a1916;
+  --color-text-secondary: #5a5850;
+  --color-text-tertiary: #9a9488;
+  --color-text-inverse: #faf9f6;
+
+  --color-border: #e0ddd6;
+  --color-border-hover: #c8c5be;
+
+  --color-accent: #2d5a8e;
+  --color-accent-hover: #1e4070;
+  --color-accent-subtle: #e8f0f8;
+
+  --color-success: #3a6b1e;
+  --color-warning: #92650a;
+  --color-error: #8b2020;
+  --color-info: #1e4a7a;
+
+  /* ── Typography ── */
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-md: 0 4px 6px -1px oklch(0 0 0 / 0.07);
+  --shadow-lg: 0 10px 15px -3px oklch(0 0 0 / 0.08);
+}

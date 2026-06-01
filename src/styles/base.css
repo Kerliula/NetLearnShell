@@ -1,6 +1,5 @@
 @theme {
   /* ── Layout ── */
-  --width-sidebar: 13rem;
   --spacing-content-x: 3rem;
   --spacing-content-y: 2.25rem;
   --spacing-sidebar-x: 0.875rem;
@@ -27,6 +26,7 @@
   --color-surface: #faf9f6;
   --color-surface-alt: #f2f0eb;
   --color-surface-hover: #e8e5de;
+  --color-surface-active: #ddd9d0;
   --color-surface-inverse: #1a1916;
   --color-surface-sidebar: #f2f0eb;
 

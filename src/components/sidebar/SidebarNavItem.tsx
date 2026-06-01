@@ -62,7 +62,7 @@ const CollapsePanel = ({ chapterId, subChapters, expanded }: CollapsePanelProps)
   <div
     id={`subchapters-${chapterId}`}
     className={clsx(
-      'grid transition-all duration-300 ease-[var(--ease-spring)]',
+      'grid transition-[grid-template-rows,opacity] duration-300 ease-[var(--ease-spring)]',
       expanded ? collapsePanelClasses.expanded : collapsePanelClasses.collapsed,
     )}
   >

@@ -1,22 +1,20 @@
-import { SidebarNavItem } from './'
 import type { Chapter } from '../../types/chapter.ts'
+import { SidebarNavItem } from './'
 
 export type SidebarNavProps = {
   chapters: Chapter[]
   activeChapterId?: number
 }
 
+const headingClasses = `
+  font-mono text-xs font-semibold uppercase
+  tracking-wider text-text-tertiary
+`
+
 export const SidebarNav = ({ chapters, activeChapterId }: SidebarNavProps) => (
-  <nav aria-label="Course Chapters" className="flex flex-col space-y-sidebar-y">
-    <h2
-      className="
-        font-mono text-xs font-semibold uppercase
-        tracking-wider
-      text-text-tertiary
-      "
-    >
-      Chapters
-    </h2>
+  <nav aria-label="Course Chapters" className="flex flex-col gap-sidebar-y">
+    <h2 className={headingClasses}>Chapters</h2>
+
     <ul role="list" className="flex flex-col">
       {chapters.map((chapter) => (
         <li key={chapter.id}>

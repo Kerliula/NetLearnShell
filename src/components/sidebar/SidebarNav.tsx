@@ -3,7 +3,7 @@ import type { Chapter } from '../../types/chapter.ts'
 
 export type SidebarNavProps = {
   chapters: Chapter[]
-  activeChapterId?: string | number
+  activeChapterId?: number
 }
 
 export const SidebarNav = ({ chapters, activeChapterId }: SidebarNavProps) => (

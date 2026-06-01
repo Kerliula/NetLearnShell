@@ -27,7 +27,7 @@ const stateClasses = {
 
 export const NavButton = ({ chapter, isActive, expanded, onToggle, children }: NavButtonProps) => (
   <button
-    aria-label={`${chapter.title}${isActive ? ', expanded' : ''}`}
+    aria-label={`${chapter.title}${expanded ? ', expanded' : ''}`}
     aria-expanded={expanded}
     aria-controls={`subchapters-${chapter.id}`}
     onClick={onToggle}

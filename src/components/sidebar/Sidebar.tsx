@@ -1,14 +1,13 @@
 import { Logo, Divider } from '../'
 import { SidebarNav } from './'
 import type { Chapter } from '../../types/chapter.ts'
-import { chapters } from '../../data/chapters.ts'
 
 export type SidebarProps = {
   chapters: Chapter[]
-  activeChapterId?: string | number
+  activeChapterId?: number
 }
 
-export const Sidebar = (_props: SidebarProps) => (
+export const Sidebar = ({ chapters, activeChapterId }: SidebarProps) => (
   <aside
     className="
       flex shrink-0 flex-col
@@ -22,6 +21,6 @@ export const Sidebar = (_props: SidebarProps) => (
   >
     <Logo />
     <Divider />
-    <SidebarNav chapters={chapters} activeChapterId={1} />
+    <SidebarNav chapters={chapters} activeChapterId={activeChapterId} />
   </aside>
 )

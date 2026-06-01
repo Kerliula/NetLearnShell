@@ -5,7 +5,7 @@ export const Logo = () => {
   const PATH = '~/master_the_internet'
 
   return (
-    <div className="flex items-center space-x-sm group select-none cursor-pointer">
+    <div className="flex items-center space-x-sm group select-none">
       <div className="flex flex-col gap-sm">
         <h1 className="flex items-center font-mono text-sm font-semibold leading-none tracking-tight">
           <span className="text-text-tertiary transition-opacity group-hover:opacity-100">

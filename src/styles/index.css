@@ -3,5 +3,5 @@
 @import 'base';
 
 :root {
-    --ease-spring: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-spring: cubic-bezier(0.87, 0, 0.13, 1);
 }

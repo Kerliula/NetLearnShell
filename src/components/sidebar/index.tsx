@@ -5,6 +5,7 @@ import { SidebarSubNavItem } from './SidebarSubNavItem.tsx'
 import { ProgressPip } from './ProgressPip'
 import { NavButton } from './NavButton.tsx'
 import { ChapterSeparator } from './ChapterSeparator.tsx'
+import { ResourceLinks } from './ResourceLinks.tsx'
 
 export {
   SidebarNav,
@@ -14,4 +15,5 @@ export {
   ProgressPip,
   NavButton,
   ChapterSeparator,
+  ResourceLinks,
 }

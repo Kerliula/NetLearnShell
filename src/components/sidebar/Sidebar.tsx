@@ -1,9 +1,12 @@
 import type { Chapter } from '../../types/chapter.ts'
+import type { Resource } from '../../types/resource.ts'
 import { Divider, Logo } from '../'
-import { SidebarNav } from './'
+import { SidebarNav, ResourceLinks } from './'
+import { resources } from '../../data/resources'
 
 export type SidebarProps = {
   chapters: Chapter[]
+  resources: Resource[]
   activeChapterId?: number
 }
 
@@ -22,5 +25,7 @@ export const Sidebar = ({ chapters }: SidebarProps) => (
     <Logo />
     <Divider label="Chapters" size="sm" />
     <SidebarNav chapters={chapters} />
+    <Divider label="Resources" size="sm" />
+    <ResourceLinks resources={resources} />
   </aside>
 )

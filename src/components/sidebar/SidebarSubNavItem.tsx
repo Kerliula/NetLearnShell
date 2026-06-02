@@ -1,4 +1,5 @@
 import type { SubChapter } from '../../types/chapter.ts'
+import { ActiveLineIndicator } from './ActiveLineIndicator'
 
 const linkClasses = `
   group relative
@@ -11,17 +12,9 @@ const linkClasses = `
   focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset
 `
 
-const indicatorClasses = `
-  absolute left-[-1px] top-0 bottom-0
-  w-[2px] bg-accent
-  origin-top scale-y-0
-  transition-transform duration-200
-  group-hover:scale-y-100
-`
-
 const sectionClasses = `
-  font-mono text-[11px]
-  shrink-0 w-4
+  font-mono text-xs
+  shrink-0 w-8
   opacity-50
   transition-opacity duration-200
   group-hover:opacity-100
@@ -32,11 +25,12 @@ export const SidebarSubNavItem = ({ subChapter }: { subChapter: SubChapter }) =>
 
   return (
     <a href={`#${subChapter.id}`} className={linkClasses}>
-      <div className={indicatorClasses} />
+      <ActiveLineIndicator isActive={false} />
+      {section !== undefined && (
+        <span className={sectionClasses}>[{String(subChapter.id).padStart(2, '0')}]</span>
+      )}
 
-      {section !== undefined && <span className={sectionClasses}>{section}</span>}
-
-      <span className="text-sm flex-1 truncate">{subChapter.title}</span>
+      <span className="text-xs flex-1 truncate ">{subChapter.title}</span>
     </a>
   )
 }

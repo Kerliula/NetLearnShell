@@ -1,13 +1,7 @@
 import clsx from 'clsx'
-import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import type { Chapter, SubChapter } from '../../types/chapter.ts'
-import { NavButton, ProgressPip, SidebarSubNavItem } from './'
-
-type SidebarNavItemProps = {
-  chapter: Chapter
-  isActive: boolean
-}
+import { NavButton, ProgressPip, SidebarSubNavItem, ChapterSeparator } from './'
 
 type CollapsePanelProps = {
   chapterId: number
@@ -15,41 +9,29 @@ type CollapsePanelProps = {
   expanded: boolean
 }
 
-export const SidebarNavItem = ({ chapter, isActive }: SidebarNavItemProps) => {
+export const SidebarNavItem = ({ chapter }: { chapter: Chapter }) => {
   const [expanded, setExpanded] = useState(false)
 
   return (
     <div className="flex flex-col">
       <NavButton
         chapter={chapter}
-        isActive={isActive}
         expanded={expanded}
         onToggle={() => setExpanded((prev) => !prev)}
       >
-        <ExpandChevron expanded={expanded} />
         <ChapterIndex id={chapter.id} />
         <span className="text-xs font-medium flex-1 truncate uppercase">{chapter.title}</span>
         <ProgressPip progress={chapter.progress} />
       </NavButton>
-
       <CollapsePanel chapterId={chapter.id} subChapters={chapter.subChapters} expanded={expanded} />
+      <ChapterSeparator id={chapter.id} expanded={expanded} />
     </div>
   )
 }
 
-const ExpandChevron = ({ expanded }: { expanded: boolean }) => (
-  <ChevronRight
-    size={14}
-    className={clsx(
-      'shrink-0 text-text-tertiary transition-transform duration-300 ease-[var(--ease-spring)]',
-      expanded ? 'rotate-90' : 'group-hover:translate-x-0.5',
-    )}
-  />
-)
-
 const ChapterIndex = ({ id }: { id: number }) => (
-  <span className="font-mono text-xs text-text-tertiary w-6 shrink-0 opacity-70">
-    {String(id).padStart(2, '0')}
+  <span className="font-mono text-xs w-8 shrink-0 opacity-70 truncate">
+    [{String(id).padStart(2, '0')}]
   </span>
 )
 
@@ -62,7 +44,7 @@ const CollapsePanel = ({ chapterId, subChapters, expanded }: CollapsePanelProps)
   <div
     id={`subchapters-${chapterId}`}
     className={clsx(
-      'grid transition-all duration-300 ease-[var(--ease-spring)]',
+      'grid transition-[grid-template-rows,opacity] duration-300 ease-[var(--ease-spring)]',
       expanded ? collapsePanelClasses.expanded : collapsePanelClasses.collapsed,
     )}
   >

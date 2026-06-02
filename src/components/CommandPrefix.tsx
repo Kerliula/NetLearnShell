@@ -11,8 +11,8 @@ const stateClasses = {
   inactive: `text-text-tertiary opacity-50 group-hover:text-text-secondary group-hover:opacity-100`,
 }
 
-export const CommandPrefix = ({ expanded, isActive }: { expanded: boolean; isActive: boolean }) => (
-  <span className={clsx(baseClasses, isActive ? stateClasses.active : stateClasses.inactive)}>
+export const CommandPrefix = ({ expanded }: { expanded: boolean }) => (
+  <span className={clsx(baseClasses, expanded ? stateClasses.active : stateClasses.inactive)}>
     {expanded ? 'ls>' : 'cd>'}
   </span>
 )

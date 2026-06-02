@@ -1,26 +1,25 @@
-export const Logo = () => {
-  const PROTOCOL = 'tcp://'
-  const HOST = 'netlearnshell.com'
-  const PORT = ':443'
-  const PATH = '~/master_the_internet'
+const PROTOCOL = 'tcp://'
+const HOST = 'netlearnshell.com'
+const PORT = ':443'
+const PATH = '~/master_the_internet'
 
-  return (
-    <div className="flex items-center space-x-sm group select-none">
-      <div className="flex flex-col gap-sm">
-        <h1 className="flex items-center font-mono text-sm font-semibold leading-none tracking-tight">
-          <span className="text-text-tertiary transition-opacity group-hover:opacity-100">
-            {PROTOCOL}
-          </span>
-          <span className="text-text-primary">{HOST}</span>
-          <span className="text-accent">{PORT}</span>
-          <span className="inline-block w-1.5 h-3.5 bg-accent ml-1 animate-pulse" />
-        </h1>
+const Caret = () => (
+  <span className="inline-block w-px h-3 bg-text-primary shrink-0 animate-[blink_1.1s_step-end_infinite]" />
+)
 
-        <p className="flex items-center font-mono text-[10px] font-medium leading-none tracking-widest text-text-tertiary uppercase">
-          <span className="text-accent mr-1 font-semibold">{'>'}</span>
-          <span>{PATH}</span>
-        </p>
-      </div>
+export const Logo = () => (
+  <div className="px-sidebar-x py-md select-none font-mono">
+    <div className="flex items-center">
+      <span className="w-2 h-2 mr-3 rounded-full bg-[#00ff41] shadow-[0_0_6px_#00ff41] shrink-0" />
+      <span className="text-text-tertiary text-xs">{PROTOCOL}</span>
+      <span className="text-text-primary text-xs font-medium">{HOST}</span>
+      <span className="text-text-tertiary text-xs">{PORT}</span>
+      <span className="flex-1" />
+      <Caret />
     </div>
-  )
-}
+    <div className="flex items-center space-x-md mt-1">
+      <span className="text-accent text-xs font-semibold shrink-0">{'>'}</span>
+      <span className="text-text-tertiary text-xs truncate">{PATH}</span>
+    </div>
+  </div>
+)

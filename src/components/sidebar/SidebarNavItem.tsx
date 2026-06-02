@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { useState } from 'react'
-import type { Chapter, SubChapter } from '../../types/chapter.ts'
+import type { Chapter, SubChapter } from '@/types/chapter'
 import { NavButton, ProgressPip, SidebarSubNavItem, ChapterSeparator } from './'
 
 type CollapsePanelProps = {

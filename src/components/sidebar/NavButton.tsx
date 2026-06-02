@@ -41,8 +41,12 @@ export const NavButton = ({ chapter, expanded, onToggle, children }: NavButtonPr
       className={clsx(
         baseClasses,
         isCompleted
-          ? (expanded ? completedClasses.active : completedClasses.inactive)
-          : (expanded ? stateClasses.active : stateClasses.inactive),
+          ? expanded
+            ? completedClasses.active
+            : completedClasses.inactive
+          : expanded
+            ? stateClasses.active
+            : stateClasses.inactive,
       )}
     >
       <ActiveLineIndicator isActive={expanded} />

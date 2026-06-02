@@ -4,7 +4,12 @@ import { Sidebar } from '../../../components/sidebar/Sidebar'
 import type { Chapter } from '../../../types/chapter'
 
 const mockChapters: Chapter[] = [
-  { id: 1, title: 'Intro', progress: 100, subChapters: [{ id: '1.1', title: 'What is the internet?' }] },
+  {
+    id: 1,
+    title: 'Intro',
+    progress: 100,
+    subChapters: [{ id: '1.1', title: 'What is the internet?' }],
+  },
   { id: 2, title: 'History', progress: 0, subChapters: [] },
 ]
 
@@ -58,25 +63,33 @@ describe('Sidebar', () => {
   })
 
   it('sets aria-hidden on aside when closed', () => {
-    const { container } = render(<Sidebar chapters={mockChapters} isOpen={false} onClose={() => {}} />)
+    const { container } = render(
+      <Sidebar chapters={mockChapters} isOpen={false} onClose={() => {}} />,
+    )
     const aside = container.querySelector('aside')
     expect(aside).toHaveAttribute('aria-hidden', 'true')
   })
 
   it('does not set aria-hidden when open', () => {
-    const { container } = render(<Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />)
+    const { container } = render(
+      <Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />,
+    )
     const aside = container.querySelector('aside')
     expect(aside).not.toHaveAttribute('aria-hidden', 'true')
   })
 
   it('translates sidebar off-screen when closed on mobile', () => {
-    const { container } = render(<Sidebar chapters={mockChapters} isOpen={false} onClose={() => {}} />)
+    const { container } = render(
+      <Sidebar chapters={mockChapters} isOpen={false} onClose={() => {}} />,
+    )
     const aside = container.querySelector('aside')
     expect(aside?.className).toContain('-translate-x-full')
   })
 
   it('shows sidebar when open on mobile', () => {
-    const { container } = render(<Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />)
+    const { container } = render(
+      <Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />,
+    )
     const aside = container.querySelector('aside')
     expect(aside?.className).toContain('translate-x-0')
   })

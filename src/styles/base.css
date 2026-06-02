@@ -23,12 +23,12 @@
   --radius-full: 9999px;
 
   /* ── Colors ── */
-  --color-surface: #1e1f20;
+  --color-surface: #181818;
   --color-surface-alt: #1a1a1a;
   --color-surface-hover: #1e1e1e;
   --color-surface-active: #282828;
   --color-surface-inverse: #e0e0e0;
-  --color-surface-sidebar: #0f0f0f;
+  --color-surface-sidebar: #161616;
 
   --color-text-primary: #ffffff;
   --color-text-secondary: #d4d4d4;

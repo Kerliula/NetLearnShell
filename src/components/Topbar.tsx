@@ -7,10 +7,12 @@ type BreadcrumbProps = {
 }
 
 const Breadcrumb = ({ parent, child }: BreadcrumbProps) => (
-  <nav className="flex items-center gap-1.5 text-sm min-w-0">
-    <span className="text-text-tertiary truncate shrink-0">{parent}</span>
+  <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm min-w-0">
+    <span className="text-text-tertiary truncate">{parent}</span>
     <ChevronRight size={12} className="text-text-tertiary/50 shrink-0" />
-    <span className="text-text-primary truncate">{child}</span>
+    <span className="text-text-primary truncate min-w-0" aria-current="page">
+      {child}
+    </span>
   </nav>
 )
 

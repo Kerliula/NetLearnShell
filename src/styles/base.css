@@ -23,33 +23,33 @@
   --radius-full: 9999px;
 
   /* ── Colors ── */
-  --color-surface: #faf9f6;
-  --color-surface-alt: #f2f0eb;
-  --color-surface-hover: #e8e5de;
-  --color-surface-active: #ddd9d0;
-  --color-surface-inverse: #1a1916;
-  --color-surface-sidebar: #f2f0eb;
+  --color-surface: #1e1f20;
+  --color-surface-alt: #1a1a1a;
+  --color-surface-hover: #1e1e1e;
+  --color-surface-active: #282828;
+  --color-surface-inverse: #e0e0e0;
+  --color-surface-sidebar: #0f0f0f;
 
-  --color-text-primary: #1a1916;
-  --color-text-secondary: #5a5850;
-  --color-text-tertiary: #9a9488;
-  --color-text-inverse: #faf9f6;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d4d4d4;
+  --color-text-tertiary: #aaaaaa;
+  --color-text-inverse: #0f0f0f;
 
-  --color-border: #e0ddd6;
-  --color-border-hover: #c8c5be;
+  --color-border: #2a2a2a;
+  --color-border-hover: #3a3a3a;
 
-  --color-accent: #2d5a8e;
-  --color-accent-hover: #1e4070;
-  --color-accent-subtle: #e8f0f8;
+  --color-accent: #00ff41;
+  --color-accent-hover: #00cc34;
+  --color-accent-subtle: #0a1a0a;
 
-  --color-success: #3a6b1e;
-  --color-warning: #92650a;
-  --color-error: #8b2020;
-  --color-info: #1e4a7a;
+  --color-success: #00ff41;
+  --color-warning: #ffaa00;
+  --color-error: #ff3355;
+  --color-info: #33aaff;
 
   /* ── Typography ── */
-  --font-serif: 'Lora', Georgia, serif;
-  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-serif: 'JetBrains Mono', monospace;
+  --font-sans: 'JetBrains Mono', monospace;
   --font-mono: 'JetBrains Mono', monospace;
 
   --text-xs: 0.6875rem;

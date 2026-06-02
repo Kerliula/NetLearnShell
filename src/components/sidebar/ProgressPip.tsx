@@ -14,11 +14,11 @@ export const ProgressPip = ({ progress }: ProgressPipProps) => {
       aria-valuenow={pct}
       aria-valuemin={0}
       aria-valuemax={100}
-      className="w-8 h-1 bg-border/50 rounded-full shrink-0 overflow-hidden"
+      className="w-16 h-0.5 bg-border/50 shrink-0 overflow-hidden ml-auto"
     >
       <div
         className={`
-          h-full bg-accent rounded-full
+          h-full bg-accent
           transition-[width,opacity] duration-500 ease-out
           ${pct === 0 ? 'opacity-0' : 'opacity-100'}
         `}

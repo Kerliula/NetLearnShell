@@ -17,10 +17,10 @@ const asideClasses = `
   gap-sidebar-y
 `
 
-export const Sidebar = ({ chapters, activeChapterId }: SidebarProps) => (
+export const Sidebar = ({ chapters }: SidebarProps) => (
   <aside className={asideClasses}>
     <Logo />
-    <Divider />
-    <SidebarNav chapters={chapters} activeChapterId={activeChapterId} />
+    <Divider label="Chapters" size="sm" />
+    <SidebarNav chapters={chapters} />
   </aside>
 )

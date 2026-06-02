@@ -33,6 +33,7 @@ describe('ProgressPip', () => {
   })
 
   it('clamps progress to 0-100', () => {
+    render(<ProgressPip progress={999} />)
     const bar = screen.getByRole('progressbar')
     expect(bar).toHaveAttribute('aria-valuenow', '100')
   })

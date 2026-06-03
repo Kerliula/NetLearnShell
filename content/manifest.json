@@ -1,0 +1,30 @@
+[
+  {
+    "chapterSlug": "01-introduction",
+    "chapterTitle": "Introduction",
+    "chapterIndex": 0,
+    "lessonSlug": "what-is-the-internet",
+    "lessonTitle": "what is the internet",
+    "lessonIndex": 0,
+    "file": "01-introduction/what-is-the-internet.mdx",
+    "prev": null,
+    "next": {
+      "chapterSlug": "02-Test",
+      "lessonSlug": "test"
+    }
+  },
+  {
+    "chapterSlug": "02-Test",
+    "chapterTitle": "Test",
+    "chapterIndex": 1,
+    "lessonSlug": "test",
+    "lessonTitle": "test",
+    "lessonIndex": 0,
+    "file": "02-Test/test.mdx",
+    "prev": {
+      "chapterSlug": "01-introduction",
+      "lessonSlug": "what-is-the-internet"
+    },
+    "next": null
+  }
+]

@@ -6,6 +6,11 @@ type BreadcrumbProps = {
   child: string
 }
 
+type TopbarProps = {
+  onMenuToggle: () => void
+  breadcrumb?: BreadcrumbProps
+}
+
 const Breadcrumb = ({ parent, child }: BreadcrumbProps) => (
   <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm min-w-0">
     <span className="text-text-tertiary truncate">{parent}</span>
@@ -16,7 +21,7 @@ const Breadcrumb = ({ parent, child }: BreadcrumbProps) => (
   </nav>
 )
 
-export const Topbar = ({ onMenuToggle }: { onMenuToggle: () => void }) => (
+export const Topbar = ({ onMenuToggle, breadcrumb }: TopbarProps) => (
   <header className="shrink-0 border-b border-border px-topbar-x py-topbar-y flex items-center gap-3">
     <button
       onClick={onMenuToggle}
@@ -25,6 +30,6 @@ export const Topbar = ({ onMenuToggle }: { onMenuToggle: () => void }) => (
     >
       <Menu size={16} />
     </button>
-    <Breadcrumb parent="Transport layer" child="3.4 — Reliable data transfer" />
+    {breadcrumb && <Breadcrumb parent={breadcrumb.parent} child={breadcrumb.child} />}
   </header>
 )

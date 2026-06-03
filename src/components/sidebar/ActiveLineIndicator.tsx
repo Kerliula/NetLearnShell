@@ -1,15 +1,30 @@
 import clsx from 'clsx'
 
-const baseClasses = `
-  absolute left-0 top-0 bottom-0
-  w-[3px] bg-accent
-`
+type Variant = 'chapter' | 'sub'
 
-const stateClasses = {
-  active: `animate-[blink_1.1s_step-end_infinite]`,
-  inactive: `scale-y-0 opacity-0 group-hover:scale-y-50 group-hover:opacity-30 transition-all duration-300 ease-out`,
+const variantClasses: Record<Variant, string> = {
+  chapter: `w-[3px]`,
+  sub: `w-px opacity-60`,
 }
 
-export const ActiveLineIndicator = ({ isActive }: { isActive: boolean }) => (
-  <div className={clsx(baseClasses, isActive ? stateClasses.active : stateClasses.inactive)} />
+const inactiveClasses = `
+  scale-y-0 opacity-0
+  group-hover:scale-y-50 group-hover:opacity-30
+  transition-all duration-300 ease-out
+`
+
+export const ActiveLineIndicator = ({
+  isActive,
+  variant = 'chapter',
+}: {
+  isActive: boolean
+  variant?: Variant
+}) => (
+  <div
+    className={clsx(
+      'absolute left-0 top-0 bottom-0 bg-accent',
+      variantClasses[variant],
+      !isActive && inactiveClasses,
+    )}
+  />
 )

@@ -1,4 +1,4 @@
-import type { Chapter } from '../../types/chapter.ts'
+import type { Chapter } from '@/types/chapter.ts'
 import { SidebarNavItem } from './'
 
 export const SidebarNav = ({ chapters }: { chapters: Chapter[] }) => (

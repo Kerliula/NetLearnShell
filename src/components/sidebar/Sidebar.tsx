@@ -39,6 +39,23 @@ export const Sidebar = ({ chapters, isOpen, onClose }: SidebarProps) => (
       <SidebarNav chapters={chapters} />
       <Divider label="Resources" size="sm" />
       <ResourceLinks resources={resources} />
+      <div className="mt-auto pt-md border-t border-border flex items-center gap-3 px-sidebar-x text-[11px] text-text-tertiary/50">
+        <span>&copy; 2026</span>
+        <a
+          href="https://github.com/Kerliula/netlearnshell"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-text-tertiary transition-colors"
+        >
+          GitHub
+        </a>
+        <a
+          href="mailto:pauliusbendaravicius12@gmail.com"
+          className="hover:text-text-tertiary transition-colors"
+        >
+          Contact
+        </a>
+      </div>
     </aside>
   </div>
 )

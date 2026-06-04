@@ -17,7 +17,7 @@ const mockChapters: Chapter[] = [
       {
         id: '1.1',
         title: 'What is the internet?',
-        chapterSlug: '01-introduction',
+        chapterSlug: '01-Introduction',
         lessonSlug: 'what-is-the-internet',
         tags: [],
       },
@@ -123,5 +123,37 @@ describe('Sidebar', () => {
     )
     const aside = container.querySelector('aside')
     expect(aside?.className).toContain('translate-x-0')
+  })
+
+  it('renders overall progress bar', () => {
+    render(<Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />, {
+      wrapper: WithRouter,
+    })
+    expect(screen.getByText('Progress')).toBeInTheDocument()
+  })
+
+  it('renders copyright notice', () => {
+    render(<Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />, {
+      wrapper: WithRouter,
+    })
+    expect(screen.getByText(/© 2026/)).toBeInTheDocument()
+  })
+
+  it('renders GitHub link', () => {
+    render(<Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />, {
+      wrapper: WithRouter,
+    })
+    const link = screen.getByText('GitHub')
+    expect(link).toBeInTheDocument()
+    expect(link.closest('a')).toHaveAttribute('href', 'https://github.com/Kerliula/netlearnshell')
+  })
+
+  it('renders contact email link', () => {
+    render(<Sidebar chapters={mockChapters} isOpen={true} onClose={() => {}} />, {
+      wrapper: WithRouter,
+    })
+    const link = screen.getByText('Contact')
+    expect(link).toBeInTheDocument()
+    expect(link.closest('a')).toHaveAttribute('href', 'mailto:pauliusbendaravicius12@gmail.com')
   })
 })

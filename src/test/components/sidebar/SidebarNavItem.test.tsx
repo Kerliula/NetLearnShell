@@ -16,14 +16,14 @@ const chapter: Chapter = {
     {
       id: '1.1',
       title: 'What is the internet?',
-      chapterSlug: '01-introduction',
+      chapterSlug: '01-Introduction',
       lessonSlug: 'what-is-the-internet',
       tags: [],
     },
     {
       id: '1.2',
       title: 'Network edge',
-      chapterSlug: '01-introduction',
+      chapterSlug: '01-Introduction',
       lessonSlug: 'network-edge',
       tags: [],
     },

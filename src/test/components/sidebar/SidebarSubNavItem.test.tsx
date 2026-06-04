@@ -8,7 +8,7 @@ describe('SidebarSubNavItem', () => {
     const sub: SubChapter = {
       id: '1.3',
       title: 'Network core',
-      chapterSlug: '01-introduction',
+      chapterSlug: '01-Introduction',
       lessonSlug: 'network-core',
       tags: [],
     }

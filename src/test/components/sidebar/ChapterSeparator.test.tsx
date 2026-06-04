@@ -15,14 +15,14 @@ describe('ChapterSeparator', () => {
   it('is visible when expanded', () => {
     const { container } = render(<ChapterSeparator id={1} expanded={true} />)
     const grid = container.firstChild as HTMLElement
-    expect(grid.className).toContain('grid-rows-[1fr]')
+    expect(grid.className).toContain('max-h-[100px]')
     expect(grid.className).toContain('opacity-100')
   })
 
   it('is hidden when collapsed', () => {
     const { container } = render(<ChapterSeparator id={1} expanded={false} />)
     const grid = container.firstChild as HTMLElement
-    expect(grid.className).toContain('grid-rows-[0fr]')
+    expect(grid.className).toContain('max-h-0')
     expect(grid.className).toContain('opacity-0')
   })
 })

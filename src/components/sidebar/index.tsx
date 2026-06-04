@@ -6,6 +6,7 @@ import { ProgressPip } from './ProgressPip'
 import { NavButton } from './NavButton.tsx'
 import { ChapterSeparator } from './ChapterSeparator.tsx'
 import { ResourceLinks } from './ResourceLinks.tsx'
+import { OverallProgress } from './OverallProgress'
 
 export {
   SidebarNav,
@@ -16,4 +17,5 @@ export {
   NavButton,
   ChapterSeparator,
   ResourceLinks,
+  OverallProgress,
 }

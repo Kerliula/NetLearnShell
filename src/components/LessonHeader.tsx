@@ -51,12 +51,12 @@ export const LessonHeader = ({
   const progress = getLessonProgress(lessonIndex, totalLessons)
 
   return (
-    <header className="pb-content-y border-b border-border">
-      <p className="text-xs text-text-tertiary mb-1 tracking-wider uppercase select-none">
+    <header className="pb-content-y border-b border-border space-y-md">
+      <p className="text-xs text-text-tertiary tracking-wider uppercase select-none">
         Chapter {chapterIndex + 1} &mdash; {chapterTitle}
       </p>
-      <h1 className="text-2xl font-medium text-text-primary mb-3 leading-tight">{lessonTitle}</h1>
-      <div className="flex items-center gap-3 mb-3">
+      <h1 className="text-2xl font-medium text-text-primary leading-tight">{lessonTitle}</h1>
+      <div className="flex items-center gap-3">
         <span className="text-xs text-text-tertiary select-none shrink-0">
           Lesson {lessonIndex + 1} of {totalLessons}
         </span>

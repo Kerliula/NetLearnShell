@@ -1,0 +1,32 @@
+---
+tags: [http, web, application-layer]
+---
+
+## HTTP Deep Dive
+
+**HTTP** (Hypertext Transfer Protocol) is the foundation of data communication on the web.
+
+### Request structure
+
+```
+GET /index.html HTTP/1.1
+Host: example.com
+Accept: text/html
+```
+
+### Response structure
+
+```
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<html>...</html>
+```
+
+### Status codes
+
+- **1xx**: Informational
+- **2xx**: Success (e.g., 200 OK)
+- **3xx**: Redirection (e.g., 301 Moved)
+- **4xx**: Client errors (e.g., 404 Not Found)
+- **5xx**: Server errors (e.g., 500 Internal Server Error)

@@ -1,10 +1,17 @@
+import { useEffect } from 'react'
 import { useParams, Navigate } from 'react-router'
 import manifest from '../../content/manifest.json'
 import { MDXContent } from '../components/MDXContent'
 import { LessonHeader, LessonNav } from '../components'
+import { useProgressStore } from '../stores/progressStore'
 
 export const LessonPage = () => {
   const { chapterSlug, lessonSlug } = useParams()
+  const markComplete = useProgressStore((s) => s.markLessonComplete)
+
+  useEffect(() => {
+    markComplete(chapterSlug!, lessonSlug!)
+  }, [chapterSlug, lessonSlug, markComplete])
 
   const lesson = findLesson(chapterSlug!, lessonSlug!)
 

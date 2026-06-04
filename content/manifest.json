@@ -3,12 +3,55 @@
     "chapterSlug": "01-introduction",
     "chapterTitle": "Introduction",
     "chapterIndex": 0,
+    "lessonSlug": "network-topologies",
+    "lessonTitle": "network topologies",
+    "lessonIndex": 0,
+    "file": "01-introduction/network-topologies.mdx",
+    "tags": [
+      "networking",
+      "topologies",
+      "fundamentals"
+    ],
+    "prev": null,
+    "next": {
+      "chapterSlug": "01-introduction",
+      "lessonSlug": "what-is-the-internet"
+    }
+  },
+  {
+    "chapterSlug": "01-introduction",
+    "chapterTitle": "Introduction",
+    "chapterIndex": 0,
     "lessonSlug": "what-is-the-internet",
     "lessonTitle": "what is the internet",
-    "lessonIndex": 0,
+    "lessonIndex": 1,
     "file": "01-introduction/what-is-the-internet.mdx",
-    "tags": ["networking", "fundamentals", "internet"],
-    "prev": null,
+    "tags": [],
+    "prev": {
+      "chapterSlug": "01-introduction",
+      "lessonSlug": "network-topologies"
+    },
+    "next": {
+      "chapterSlug": "02-Test",
+      "lessonSlug": "advanced-test"
+    }
+  },
+  {
+    "chapterSlug": "02-Test",
+    "chapterTitle": "Test",
+    "chapterIndex": 1,
+    "lessonSlug": "advanced-test",
+    "lessonTitle": "advanced test",
+    "lessonIndex": 0,
+    "file": "02-Test/advanced-test.mdx",
+    "tags": [
+      "test",
+      "advanced"
+    ],
+    "prev": {
+      "chapterSlug": "01-introduction",
+      "lessonSlug": "what-is-the-internet"
+    },
     "next": {
       "chapterSlug": "02-Test",
       "lessonSlug": "test"
@@ -20,12 +63,78 @@
     "chapterIndex": 1,
     "lessonSlug": "test",
     "lessonTitle": "test",
-    "lessonIndex": 0,
+    "lessonIndex": 1,
     "file": "02-Test/test.mdx",
-    "tags": ["test"],
+    "tags": [],
     "prev": {
-      "chapterSlug": "01-introduction",
-      "lessonSlug": "what-is-the-internet"
+      "chapterSlug": "02-Test",
+      "lessonSlug": "advanced-test"
+    },
+    "next": {
+      "chapterSlug": "03-Protocols",
+      "lessonSlug": "dns-resolution"
+    }
+  },
+  {
+    "chapterSlug": "03-Protocols",
+    "chapterTitle": "Protocols",
+    "chapterIndex": 2,
+    "lessonSlug": "dns-resolution",
+    "lessonTitle": "dns resolution",
+    "lessonIndex": 0,
+    "file": "03-Protocols/dns-resolution.mdx",
+    "tags": [
+      "dns",
+      "networking",
+      "fundamentals"
+    ],
+    "prev": {
+      "chapterSlug": "02-Test",
+      "lessonSlug": "test"
+    },
+    "next": {
+      "chapterSlug": "03-Protocols",
+      "lessonSlug": "http-deep-dive"
+    }
+  },
+  {
+    "chapterSlug": "03-Protocols",
+    "chapterTitle": "Protocols",
+    "chapterIndex": 2,
+    "lessonSlug": "http-deep-dive",
+    "lessonTitle": "http deep dive",
+    "lessonIndex": 1,
+    "file": "03-Protocols/http-deep-dive.mdx",
+    "tags": [
+      "http",
+      "web",
+      "application-layer"
+    ],
+    "prev": {
+      "chapterSlug": "03-Protocols",
+      "lessonSlug": "dns-resolution"
+    },
+    "next": {
+      "chapterSlug": "03-Protocols",
+      "lessonSlug": "protocol-basics"
+    }
+  },
+  {
+    "chapterSlug": "03-Protocols",
+    "chapterTitle": "Protocols",
+    "chapterIndex": 2,
+    "lessonSlug": "protocol-basics",
+    "lessonTitle": "protocol basics",
+    "lessonIndex": 2,
+    "file": "03-Protocols/protocol-basics.mdx",
+    "tags": [
+      "protocols",
+      "fundamentals",
+      "networking"
+    ],
+    "prev": {
+      "chapterSlug": "03-Protocols",
+      "lessonSlug": "http-deep-dive"
     },
     "next": null
   }

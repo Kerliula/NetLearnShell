@@ -3,29 +3,83 @@
     "chapterSlug": "01-Introduction",
     "chapterTitle": "Introduction",
     "chapterIndex": 0,
-    "lessonSlug": "network-topologies",
-    "lessonTitle": "network topologies",
+    "lessonSlug": "what-is-this-course",
+    "lessonTitle": "what is this course",
     "lessonIndex": 0,
-    "file": "01-Introduction/network-topologies.mdx",
-    "tags": ["networking", "topologies", "fundamentals"],
+    "file": "01-Introduction/what-is-this-course.mdx",
+    "tags": ["overview", "networking", "fundamentals"],
     "prev": null,
     "next": {
       "chapterSlug": "01-Introduction",
-      "lessonSlug": "what-is-the-internet"
+      "lessonSlug": "who-is-this-for"
     }
   },
   {
     "chapterSlug": "01-Introduction",
     "chapterTitle": "Introduction",
     "chapterIndex": 0,
-    "lessonSlug": "what-is-the-internet",
-    "lessonTitle": "what is the internet",
+    "lessonSlug": "who-is-this-for",
+    "lessonTitle": "who is this for",
     "lessonIndex": 1,
-    "file": "01-Introduction/what-is-the-internet.mdx",
-    "tags": [],
+    "file": "01-Introduction/who-is-this-for.mdx",
+    "tags": ["overview", "prerequisites"],
     "prev": {
       "chapterSlug": "01-Introduction",
-      "lessonSlug": "network-topologies"
+      "lessonSlug": "what-is-this-course"
+    },
+    "next": {
+      "chapterSlug": "01-Introduction",
+      "lessonSlug": "what-you-will-need"
+    }
+  },
+  {
+    "chapterSlug": "01-Introduction",
+    "chapterTitle": "Introduction",
+    "chapterIndex": 0,
+    "lessonSlug": "what-you-will-need",
+    "lessonTitle": "what you will need",
+    "lessonIndex": 2,
+    "file": "01-Introduction/what-you-will-need.mdx",
+    "tags": ["prerequisites", "setup"],
+    "prev": {
+      "chapterSlug": "01-Introduction",
+      "lessonSlug": "who-is-this-for"
+    },
+    "next": {
+      "chapterSlug": "01-Introduction",
+      "lessonSlug": "how-to-use-this-course"
+    }
+  },
+  {
+    "chapterSlug": "01-Introduction",
+    "chapterTitle": "Introduction",
+    "chapterIndex": 0,
+    "lessonSlug": "how-to-use-this-course",
+    "lessonTitle": "how to use this course",
+    "lessonIndex": 3,
+    "file": "01-Introduction/how-to-use-this-course.mdx",
+    "tags": ["overview", "navigation"],
+    "prev": {
+      "chapterSlug": "01-Introduction",
+      "lessonSlug": "what-you-will-need"
+    },
+    "next": {
+      "chapterSlug": "01-Introduction",
+      "lessonSlug": "a-note-on-accuracy"
+    }
+  },
+  {
+    "chapterSlug": "01-Introduction",
+    "chapterTitle": "Introduction",
+    "chapterIndex": 0,
+    "lessonSlug": "a-note-on-accuracy",
+    "lessonTitle": "a note on accuracy",
+    "lessonIndex": 4,
+    "file": "01-Introduction/a-note-on-accuracy.mdx",
+    "tags": ["overview", "disclaimer"],
+    "prev": {
+      "chapterSlug": "01-Introduction",
+      "lessonSlug": "how-to-use-this-course"
     },
     "next": null
   }

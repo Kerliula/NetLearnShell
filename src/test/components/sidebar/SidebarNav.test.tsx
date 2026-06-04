@@ -46,6 +46,6 @@ describe('SidebarNav', () => {
   it('renders correct number of nav items', () => {
     render(<SidebarNav chapters={mockChapters} />, { wrapper: WithRouter })
     const buttons = screen.getAllByRole('button')
-    expect(buttons).toHaveLength(2)
+    expect(buttons).toHaveLength(3)
   })
 })

@@ -1,6 +1,6 @@
 import type { Chapter } from '../../types/chapter.ts'
 import { Divider, Logo } from '../'
-import { SidebarNav, ResourceLinks } from './'
+import { SidebarNav, ResourceLinks, OverallProgress } from './'
 import { resources } from '../../data/resources'
 import clsx from 'clsx'
 
@@ -25,7 +25,7 @@ export const Sidebar = ({ chapters, isOpen, onClose }: SidebarProps) => (
         'py-sidebar-y px-sidebar-x',
         'h-screen overflow-y-auto custom-scrollbar',
         'border-r border-border bg-surface-sidebar',
-        'gap-sidebar-y',
+        'gap-md',
         'fixed inset-y-0 left-0 z-40 w-72',
         'transition-transform duration-300 ease-[var(--ease-spring)]',
         isOpen ? 'translate-x-0' : '-translate-x-full',
@@ -34,6 +34,7 @@ export const Sidebar = ({ chapters, isOpen, onClose }: SidebarProps) => (
       aria-hidden={!isOpen}
     >
       <Logo />
+      <OverallProgress chapters={chapters} />
       <Divider label="Chapters" size="sm" />
       <SidebarNav chapters={chapters} />
       <Divider label="Resources" size="sm" />

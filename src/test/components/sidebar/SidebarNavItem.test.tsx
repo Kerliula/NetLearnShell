@@ -45,7 +45,7 @@ describe('SidebarNavItem', () => {
   it('sub-chapter panel starts collapsed', () => {
     const { container } = render(<SidebarNavItem chapter={chapter} />, { wrapper: WithRouter })
     const panel = container.querySelector('[id="subchapters-1"]')
-    expect(panel?.className).toContain('grid-rows-[0fr]')
+    expect(panel?.className).toContain('max-h-0')
   })
 
   it('expands and shows sub-chapters on button click', async () => {
@@ -69,7 +69,7 @@ describe('SidebarNavItem', () => {
 
     await user.click(button)
     const panel = container.querySelector('[id="subchapters-1"]')
-    expect(panel?.className).toContain('grid-rows-[0fr]')
+    expect(panel?.className).toContain('max-h-0')
   })
 
   it('shows chapter separator when expanded', async () => {
@@ -77,7 +77,7 @@ describe('SidebarNavItem', () => {
     const { container } = render(<SidebarNavItem chapter={chapter} />, { wrapper: WithRouter })
 
     const separator = container.querySelector('[class*="ease-spring"]:last-child')
-    expect(separator?.className).toContain('grid-rows-[0fr]')
+    expect(separator?.className).toContain('max-h-0')
 
     const button = screen.getByRole('button', { name: /introduction/i })
     await user.click(button)

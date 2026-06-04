@@ -12,19 +12,19 @@ type CollapsePanelProps = {
 }
 
 const COLLAPSE_PANEL_CLASSES = {
-  expanded: 'grid-rows-[1fr] opacity-100',
-  collapsed: 'grid-rows-[0fr] opacity-0',
+  expanded: 'max-h-[500px] opacity-100',
+  collapsed: 'max-h-0 opacity-0 overflow-hidden',
 }
 
 const CollapsePanel = ({ chapterId, subChapters, expanded }: CollapsePanelProps) => (
   <div
     id={`subchapters-${chapterId}`}
     className={clsx(
-      'grid transition-[grid-template-rows,opacity] duration-300 ease-[var(--ease-spring)]',
+      'grid transition-[max-height,opacity] duration-300 ease-[var(--ease-spring)] overflow-hidden',
       expanded ? COLLAPSE_PANEL_CLASSES.expanded : COLLAPSE_PANEL_CLASSES.collapsed,
     )}
   >
-    <ul role="list" className="flex flex-col border-l border-border/50 overflow-hidden">
+    <ul role="list" className="flex flex-col border-l border-border/50">
       {subChapters.map((sub) => (
         <li key={sub.id}>
           <SidebarSubNavItem subChapter={sub} />

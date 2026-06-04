@@ -2,6 +2,8 @@ import { Link, useLocation } from 'react-router'
 import clsx from 'clsx'
 import type { SubChapter } from '@/types/chapter.ts'
 import { ActiveLineIndicator } from './ActiveLineIndicator'
+import { useProgressStore } from '@/stores/progressStore'
+import { CheckCircle, Circle } from 'lucide-react'
 
 const LINK_CLASSES = `
   group relative
@@ -27,8 +29,14 @@ const formatSectionId = (id: string) => String(id).padStart(2, '0')
 
 const parseSectionNumber = (id: string) => id.split('.')[1]
 
+const iconSize = 14
+
 export const SidebarSubNavItem = ({ subChapter }: { subChapter: SubChapter }) => {
   const { pathname } = useLocation()
+  const isComplete = useProgressStore((s) =>
+    s.isLessonComplete(subChapter.chapterSlug, subChapter.lessonSlug),
+  )
+  const toggle = useProgressStore((s) => s.toggleLessonComplete)
 
   const href = toLessonHref(subChapter)
   const isActive = pathname === href
@@ -50,6 +58,28 @@ export const SidebarSubNavItem = ({ subChapter }: { subChapter: SubChapter }) =>
       )}
 
       <span className="text-xs flex-1 truncate">{subChapter.title}</span>
+
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          toggle(subChapter.chapterSlug, subChapter.lessonSlug)
+        }}
+        className={clsx(
+          'shrink-0 transition-colors duration-200',
+          isComplete
+            ? 'text-accent hover:text-accent-hover'
+            : 'text-text-tertiary/30 hover:text-text-tertiary',
+        )}
+        aria-label={
+          isComplete
+            ? `Mark "${subChapter.title}" incomplete`
+            : `Mark "${subChapter.title}" complete`
+        }
+      >
+        {isComplete ? <CheckCircle size={iconSize} /> : <Circle size={iconSize} />}
+      </button>
     </Link>
   )
 }

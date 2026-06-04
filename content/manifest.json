@@ -7,6 +7,7 @@
     "lessonTitle": "what is the internet",
     "lessonIndex": 0,
     "file": "01-introduction/what-is-the-internet.mdx",
+    "tags": ["networking", "fundamentals", "internet"],
     "prev": null,
     "next": {
       "chapterSlug": "02-Test",
@@ -21,6 +22,7 @@
     "lessonTitle": "test",
     "lessonIndex": 0,
     "file": "02-Test/test.mdx",
+    "tags": ["test"],
     "prev": {
       "chapterSlug": "01-introduction",
       "lessonSlug": "what-is-the-internet"

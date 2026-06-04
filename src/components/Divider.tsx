@@ -11,19 +11,23 @@ const labelSizeClasses: Record<DividerSize, string> = {
   md: 'text-xs',
 }
 
+const dividerClasses = {
+  plain: 'border-t border-border',
+  labeled:
+    'flex items-center gap-sm font-mono uppercase tracking-widest text-text-tertiary select-none',
+  line: 'flex-1 h-px bg-border',
+}
+
 export const Divider = ({ label, size = 'xs' }: DividerProps) => {
   if (!label) {
-    return <div className="border-t border-border" />
+    return <div className={dividerClasses.plain} />
   }
 
   return (
-    <div
-      aria-hidden="true"
-      className="flex items-center gap-2 font-mono uppercase tracking-widest text-text-tertiary select-none"
-    >
-      <div className="flex-1 h-px bg-border" />
+    <div aria-hidden="true" className={dividerClasses.labeled}>
+      <div className={dividerClasses.line} />
       <span className={labelSizeClasses[size]}>{label}</span>
-      <div className="flex-1 h-px bg-border" />
+      <div className={dividerClasses.line} />
     </div>
   )
 }

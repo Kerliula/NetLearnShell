@@ -1,6 +1,6 @@
 import type { Chapter } from '@/types/chapter.ts'
 import { useLocation } from 'react-router'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export const useChapterExpansion = (chapter: Chapter) => {
   const { pathname } = useLocation()
@@ -10,14 +10,7 @@ export const useChapterExpansion = (chapter: Chapter) => {
 
   const [expanded, setExpanded] = useState(isActiveChapter)
 
-  useEffect(() => {
-    if (isActiveChapter) setExpanded(true)
-  }, [isActiveChapter])
-
-  const toggle = () => {
-    if (isActiveChapter) return
-    setExpanded((prev) => !prev)
-  }
+  const toggle = () => setExpanded((prev) => !prev)
 
   return { expanded, isActiveChapter, toggle }
 }

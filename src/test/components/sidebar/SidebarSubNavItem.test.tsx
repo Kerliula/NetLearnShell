@@ -10,6 +10,7 @@ describe('SidebarSubNavItem', () => {
       title: 'Network core',
       chapterSlug: '01-introduction',
       lessonSlug: 'network-core',
+      tags: [],
     }
     render(<SidebarSubNavItem subChapter={sub} />, { wrapper: MemoryRouter })
     expect(screen.getByText('Network core')).toBeInTheDocument()
@@ -22,6 +23,7 @@ describe('SidebarSubNavItem', () => {
       title: 'P2P',
       chapterSlug: '03-app-layer',
       lessonSlug: 'p2p',
+      tags: [],
     }
     render(<SidebarSubNavItem subChapter={sub} />, { wrapper: MemoryRouter })
     const link = screen.getByRole('link')
@@ -34,6 +36,7 @@ describe('SidebarSubNavItem', () => {
       title: 'Network layer',
       chapterSlug: '05-network',
       lessonSlug: 'overview',
+      tags: [],
     }
     render(<SidebarSubNavItem subChapter={sub} />, { wrapper: MemoryRouter })
     expect(screen.getByText('Network layer')).toBeInTheDocument()
@@ -46,6 +49,7 @@ describe('SidebarSubNavItem', () => {
       title: 'ARPANET',
       chapterSlug: '02-history',
       lessonSlug: 'arpanet',
+      tags: [],
     }
     const { container } = render(<SidebarSubNavItem subChapter={sub} />, { wrapper: MemoryRouter })
     const indicators = container.querySelectorAll('.bg-accent')

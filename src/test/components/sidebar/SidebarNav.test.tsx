@@ -14,7 +14,13 @@ const mockChapters: Chapter[] = [
     title: 'History',
     progress: 50,
     subChapters: [
-      { id: '2.1', title: 'Early days', chapterSlug: '02-history', lessonSlug: 'early-days' },
+      {
+        id: '2.1',
+        title: 'Early days',
+        chapterSlug: '02-history',
+        lessonSlug: 'early-days',
+        tags: [],
+      },
     ],
   },
 ]

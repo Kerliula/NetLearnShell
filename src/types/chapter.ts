@@ -3,6 +3,7 @@ export type SubChapter = {
   title: string
   chapterSlug: string
   lessonSlug: string
+  tags: string[]
 }
 
 export type Chapter = {

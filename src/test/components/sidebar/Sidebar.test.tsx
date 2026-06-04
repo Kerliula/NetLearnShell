@@ -19,6 +19,7 @@ const mockChapters: Chapter[] = [
         title: 'What is the internet?',
         chapterSlug: '01-introduction',
         lessonSlug: 'what-is-the-internet',
+        tags: [],
       },
     ],
   },

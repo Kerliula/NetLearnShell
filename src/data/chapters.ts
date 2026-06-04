@@ -23,6 +23,7 @@ const toSubChapter = (lesson: (typeof manifest)[number]): Chapter['subChapters']
   title: lesson.lessonTitle,
   chapterSlug: lesson.chapterSlug,
   lessonSlug: lesson.lessonSlug,
+  tags: lesson.tags ?? [],
 })
 
 const groupByChapter = (lessons: typeof manifest): Map<string, ChapterAccumulator> => {

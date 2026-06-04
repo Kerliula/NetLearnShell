@@ -11,12 +11,38 @@ type Lesson = {
   lessonSlug: string
   lessonTitle: string
   lessonIndex: number
-  file: string // relative path to .mdx
+  file: string
+  tags: string[]
   prev: { chapterSlug: string; lessonSlug: string } | null
   next: { chapterSlug: string; lessonSlug: string } | null
 }
 
 const toTitle = (slug: string) => slug.replace(/^\d+-/, '').replace(/-/g, ' ')
+
+const parseFrontmatter = (filePath: string): { tags?: string[] } => {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    const match = content.match(/^---\n([\s\S]*?)\n---/)
+    if (!match) return {}
+    const frontmatter: Record<string, unknown> = {}
+    for (const line of match[1].split('\n')) {
+      const [key, ...rest] = line.split(':')
+      if (!key) continue
+      const val = rest.join(':').trim()
+      if (val.startsWith('[') && val.endsWith(']')) {
+        frontmatter[key.trim()] = val
+          .slice(1, -1)
+          .split(',')
+          .map((s) => s.trim().replace(/['"]/g, ''))
+      } else {
+        frontmatter[key.trim()] = val.replace(/['"]/g, '')
+      }
+    }
+    return frontmatter as { tags?: string[] }
+  } catch {
+    return {}
+  }
+}
 
 const chapterDirs = fs
   .readdirSync(CONTENT_DIR, { withFileTypes: true })
@@ -38,6 +64,8 @@ for (const [ci, chapterDir] of chapterDirs.entries()) {
 
   for (const [li, file] of lessonFiles.entries()) {
     const lessonSlug = file.replace(/\.mdx$/, '')
+    const mdxPath = path.join(CONTENT_DIR, chapterDir.name, file)
+    const { tags } = parseFrontmatter(mdxPath)
     lessons.push({
       chapterSlug: chapterDir.name,
       chapterTitle,
@@ -46,7 +74,8 @@ for (const [ci, chapterDir] of chapterDirs.entries()) {
       lessonTitle: toTitle(lessonSlug),
       lessonIndex: li,
       file: `${chapterDir.name}/${file}`,
-      prev: null, // filled in below
+      tags: tags ?? [],
+      prev: null,
       next: null,
     })
   }

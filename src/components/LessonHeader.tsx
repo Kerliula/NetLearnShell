@@ -55,7 +55,9 @@ export const LessonHeader = ({
       <p className="text-xs text-text-tertiary tracking-wider uppercase select-none">
         Chapter {chapterIndex + 1} &mdash; {chapterTitle}
       </p>
-      <h1 className="text-2xl font-medium text-text-primary leading-tight">{lessonTitle}</h1>
+      <h1 className="text-2xl font-medium text-text-primary leading-tight uppercase">
+        {lessonTitle}
+      </h1>
       <div className="flex items-center gap-3">
         <span className="text-xs text-text-tertiary select-none shrink-0">
           Lesson {lessonIndex + 1} of {totalLessons}

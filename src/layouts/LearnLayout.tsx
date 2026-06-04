@@ -32,7 +32,11 @@ export const LearnLayout = () => {
 
   return (
     <div className="flex h-screen bg-surface">
-      <Sidebar chapters={chaptersWithProgress} isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar
+        chapters={chaptersWithProgress}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
       <div className="flex flex-1 flex-col overflow-hidden">
         <Topbar onMenuToggle={() => setSidebarOpen((prev) => !prev)} breadcrumb={breadcrumb} />
         <main className="flex-1 overflow-y-auto px-content-x">

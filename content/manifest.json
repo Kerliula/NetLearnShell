@@ -7,11 +7,7 @@
     "lessonTitle": "network topologies",
     "lessonIndex": 0,
     "file": "01-introduction/network-topologies.mdx",
-    "tags": [
-      "networking",
-      "topologies",
-      "fundamentals"
-    ],
+    "tags": ["networking", "topologies", "fundamentals"],
     "prev": null,
     "next": {
       "chapterSlug": "01-introduction",
@@ -44,10 +40,7 @@
     "lessonTitle": "advanced test",
     "lessonIndex": 0,
     "file": "02-Test/advanced-test.mdx",
-    "tags": [
-      "test",
-      "advanced"
-    ],
+    "tags": ["test", "advanced"],
     "prev": {
       "chapterSlug": "01-introduction",
       "lessonSlug": "what-is-the-internet"
@@ -83,11 +76,7 @@
     "lessonTitle": "dns resolution",
     "lessonIndex": 0,
     "file": "03-Protocols/dns-resolution.mdx",
-    "tags": [
-      "dns",
-      "networking",
-      "fundamentals"
-    ],
+    "tags": ["dns", "networking", "fundamentals"],
     "prev": {
       "chapterSlug": "02-Test",
       "lessonSlug": "test"
@@ -105,11 +94,7 @@
     "lessonTitle": "http deep dive",
     "lessonIndex": 1,
     "file": "03-Protocols/http-deep-dive.mdx",
-    "tags": [
-      "http",
-      "web",
-      "application-layer"
-    ],
+    "tags": ["http", "web", "application-layer"],
     "prev": {
       "chapterSlug": "03-Protocols",
       "lessonSlug": "dns-resolution"
@@ -127,11 +112,7 @@
     "lessonTitle": "protocol basics",
     "lessonIndex": 2,
     "file": "03-Protocols/protocol-basics.mdx",
-    "tags": [
-      "protocols",
-      "fundamentals",
-      "networking"
-    ],
+    "tags": ["protocols", "fundamentals", "networking"],
     "prev": {
       "chapterSlug": "03-Protocols",
       "lessonSlug": "http-deep-dive"

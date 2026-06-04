@@ -33,7 +33,9 @@ const iconSize = 14
 
 export const SidebarSubNavItem = ({ subChapter }: { subChapter: SubChapter }) => {
   const { pathname } = useLocation()
-  const isComplete = useProgressStore((s) => s.isLessonComplete(subChapter.chapterSlug, subChapter.lessonSlug))
+  const isComplete = useProgressStore((s) =>
+    s.isLessonComplete(subChapter.chapterSlug, subChapter.lessonSlug),
+  )
   const toggle = useProgressStore((s) => s.toggleLessonComplete)
 
   const href = toLessonHref(subChapter)
@@ -70,7 +72,11 @@ export const SidebarSubNavItem = ({ subChapter }: { subChapter: SubChapter }) =>
             ? 'text-accent hover:text-accent-hover'
             : 'text-text-tertiary/30 hover:text-text-tertiary',
         )}
-        aria-label={isComplete ? `Mark "${subChapter.title}" incomplete` : `Mark "${subChapter.title}" complete`}
+        aria-label={
+          isComplete
+            ? `Mark "${subChapter.title}" incomplete`
+            : `Mark "${subChapter.title}" complete`
+        }
       >
         {isComplete ? <CheckCircle size={iconSize} /> : <Circle size={iconSize} />}
       </button>

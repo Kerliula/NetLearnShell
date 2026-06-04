@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import mdx from '@mdx-js/rollup'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -13,7 +14,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [react(), tailwindcss()],
+  plugins: [mdx(), react(), tailwindcss()],
   test: {
     environment: 'jsdom',
     globals: true,

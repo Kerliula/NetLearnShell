@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 const baseClasses = `
-  mr-3 select-none
+  mr-md select-none
   font-mono text-xs font-bold uppercase tracking-widest
   transition-colors duration-200
 `

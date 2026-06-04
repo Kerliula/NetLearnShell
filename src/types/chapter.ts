@@ -1,6 +1,9 @@
 export type SubChapter = {
   id: string
   title: string
+  chapterSlug: string
+  lessonSlug: string
+  tags: string[]
 }
 
 export type Chapter = {

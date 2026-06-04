@@ -27,3 +27,107 @@
     opacity: 0;
   }
 }
+
+.mdx-content h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.mdx-content h2 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.mdx-content h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.mdx-content p {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.mdx-content strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.mdx-content code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125em;
+  background: var(--color-surface-hover);
+  color: var(--color-accent);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+.mdx-content pre {
+  background: var(--color-surface-sidebar);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  overflow-x: auto;
+}
+
+.mdx-content pre code {
+  background: none;
+  color: var(--color-text-secondary);
+  padding: 0;
+  border-radius: 0;
+}
+
+.mdx-content ul,
+.mdx-content ol {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  padding-left: var(--spacing-xl);
+}
+
+.mdx-content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s;
+}
+
+.mdx-content a:hover {
+  opacity: 0.8;
+}
+
+.mdx-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--spacing-md);
+  margin-left: 0;
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.mdx-content hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.mdx-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-md);
+}
+
+.mdx-content th,
+.mdx-content td {
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  color: var(--color-text-secondary);
+}
+
+.mdx-content th {
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+  font-weight: var(--font-weight-medium);
+}
